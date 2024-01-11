@@ -74,7 +74,7 @@ router.post('/me', async(req,res) => {
 router.post('/logout', async(req,res) => {
     try {
     const token = req.cookies.token;
-    res.cookie('token',token+";max-age=0")
+    res.cookie('token',token)
     res.status(201).send()
     } catch (error) {
      res.status(401).send("Error de deslogueo")
