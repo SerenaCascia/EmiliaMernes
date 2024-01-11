@@ -97,7 +97,7 @@ const deleteAlbum = async (album) => {
         title: 'Deslogueado',
         icon: 'success',
       })
-      window.location.href= "../login/login.html"
+      // window.location.href= "../login/login.html"
     } catch (error) {
       console.log(error);
     }
