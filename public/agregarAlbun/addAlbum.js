@@ -1,3 +1,18 @@
+const onLoad = async () => {
+  try {
+    const respuesta = await axios.post("../me");
+    const user = `${respuesta.data.nombre} ${respuesta.data.apellido}`;
+    const userName = document.getElementById("usuario");
+    userName.textContent = user;
+  } catch (error) {
+    console.log(error)
+    const userName = document.getElementById("usuario");
+    userName.textContent = 'No hay nadie :( hace el log out';
+    // window.location.href = "./login/login.html";
+
+  }
+};
+onLoad();
 
 // Valores ingresados por el usuario
 function getInputValues() {
@@ -60,7 +75,7 @@ const logout = async () => {
       title: 'Deslogueado',
       icon: 'success',
     })
-    window.location.href= "../../login/login.html"
+    // window.location.href= "../../login/login.html"
   } catch (error) {
     console.log(error);
   }
