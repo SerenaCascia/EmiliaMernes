@@ -66,6 +66,7 @@ router.post('/me', async(req,res) => {
         const payload = jwt.verify(token,secret);
         res.send(payload);
     } catch (error) {
+        console.log(error)
      res.status(401).send("Error")
     }
 })
