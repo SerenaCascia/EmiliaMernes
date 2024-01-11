@@ -1,36 +1,13 @@
-// discos favoritos
-
-// const discosFavoritos=[];
-
-// function agregarFavorito(discos) {
-//     const imgs=document.querySelectorAll("img");
-
-//     for (let i = 0; i< imgs.length; i++) {
-//       let disco=imgs[i].getAttribute("alt");
-//         if(discos.includes(disco)) {
-//             const icon = document.createElement("i");
-//             icon.classList.add("fa-solid");
-//             icon.classList.add("fa-star");
-//             imgs[i].parentNode.appendChild(icon);
-//             imgs[i].parentElement.classList.add("favorite");
-//         }
-//     }
-// }
-// agregarFavorito(discosFavoritos);
-
 const redirect = (id) => { window.location.href = `./albums/album.html?album=${id}`}
 
-// const onLoad = async () => {
-//   try {
-//     const respuesta = await axios.get("../me");
-//     const User = `${respuesta.user.nombre} ${respuesta.user.apellido}`;
-//     const userName = document.getElementById("usuario");
-//     userName.textContent = User;
-//   } catch (error) {
-//     window.location.href = "../login/login.html";
-//   }
-// };
-// onLoad();
+const onLoad = async () => {
+  try {
+    const respuesta = await axios.post("../me");
+  } catch (error) {
+    window.location.href = "../login/login.html";
+  }
+};
+onLoad();
 
 const renderAlbums = (album) => {
     const div = document.getElementsByClassName('containerAlbums')[0]
@@ -79,7 +56,6 @@ const renderAlbums = (album) => {
             deleteAlbum(respuesta.data[i]._id);
           });
         }
-        console.log(respuesta);
 
     } catch (error) {
         console.log(error);
@@ -108,7 +84,7 @@ const deleteAlbum = async (album) => {
 
   const logout = async () => {
     try {
-      await axios.post('../me');
+      await axios.post('../logout');
 
       await swal({
         title: 'Deslogueado',
