@@ -13,7 +13,8 @@ dotenv.config();
 const port=process.env.PORT
 const password=process.env.PASSWORD
 
-const url=`mongodb+srv://SerenaCascia:${password}@curso-intro.jw2pjxq.mongodb.net/?retryWrites=true&w=majority`;
+// const url=`mongodb+srv://SerenaCascia:${password}@curso-intro.jw2pjxq.mongodb.net/?retryWrites=true&w=majority`;
+const url=`mongodb+srv://SerenaCascia:39668145@curso-intro.jw2pjxq.mongodb.net/?retryWrites=true&w=majority`;
 
 
 app.use(express.json());
@@ -26,7 +27,7 @@ const connectToMongo= async() =>{
 
     try{
       await mongoose.connect(url);
-      app.listen(port, () => {
+      app.listen(3000, () => {
         console.log('servidor escuchando y DB conectado.')
       })
     }catch(error){
