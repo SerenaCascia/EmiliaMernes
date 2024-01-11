@@ -3,9 +3,15 @@ const redirect = (id) => { window.location.href = `./albums/album.html?album=${i
 const onLoad = async () => {
   try {
     const respuesta = await axios.post("../me");
+    const user = `${respuesta.data.nombre} ${respuesta.data.apellido}`;
+    const userName = document.getElementById("usuario");
+    userName.textContent = user;
   } catch (error) {
     console.log(error)
-    window.location.href = "./login/login.html";
+    const userName = document.getElementById("usuario");
+    userName.textContent = 'No hay nadie :(';
+    // window.location.href = "./login/login.html";
+
   }
 };
 onLoad();
@@ -91,7 +97,7 @@ const deleteAlbum = async (album) => {
         title: 'Deslogueado',
         icon: 'success',
       })
-      window.location.href= "./login/login.html"
+      window.location.href= "../login/login.html"
     } catch (error) {
       console.log(error);
     }
