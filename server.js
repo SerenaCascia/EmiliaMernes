@@ -18,7 +18,7 @@ const url=`mongodb+srv://SerenaCascia:39668145@curso-intro.jw2pjxq.mongodb.net/?
 
 
 app.use(express.json());
-app.use(cookieParser())
+app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/health", (req, res) => res.sendStatus(200));
