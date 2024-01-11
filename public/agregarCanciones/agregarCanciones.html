@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edita tu album</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div id="profile">
+      <span>Usuario</span>
+      </div>
+      <!-- menu -->
+      <div> 
+          <ul>
+          <li><a href="../index.html">Otros albums</a></li>
+          <li> <a href="../editarAlbum/editarAlbum.html">Editar album</a></li>
+          <li> <a href="#">Añadir canciones</a></li>
+          <li id="logout">Log Out</li>
+          </ul>
+          </div>
+  </div>  
+    <div class="base">
+      <form class="formularios" action="" method="">
+        <h2>Añadir canciones</h2>
+        <label
+          >Titulo de la cancion:
+          <input
+            class="input"
+            type="text"
+            id="titulo"
+            name="nombre_del_album"
+            placeholder="Ingresa el nombre del album"
+            required /></label
+        ><br />
+        <label
+          >Duracion:
+          <input
+          class="input"
+            type="text"
+            id="duracion"
+            name="duracion_de_la_cancion"
+            placeholder="Ingresa la duracion de la cancion"
+            required /></label
+        ><br />
+        <label
+          >Link para escucharla:
+          <input
+          class="input"
+            type="text"
+            id="link"
+            name="foto_del_disco"
+            placeholder="Ingresar la url para escucharla"
+            required /></label
+        ><br />
+        <button type="submit" id="agregar_cancion">Guardar</button> <br> <button type="button" id="cancelar_cancion">Cancelar</button>
+      </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="agregarCanciones.js"></script>
+  </body>
+</html>

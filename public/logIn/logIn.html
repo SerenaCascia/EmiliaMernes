@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emilia | Ingresar</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body id="fondoLogin">
+    <div class="cajaEstiloRetro positionRelative">
+      <h3>Ingresar</h3>
+      <form action="" method="" class="formularios">
+        <label
+          >Email:
+          <input
+            class="input"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="mail@gmail.com"
+        /></label>
+        <br />
+        <label
+          >Contraseña:
+          <input class="input" type="password" id="contraseña" name="contraseña" placeholder=""
+        /></label>
+        <p id="error"></p>
+        <br />
+        <button type="submit" id="ingresar">
+          Ingresar
+          <div class="arrow-wrapper">
+            <div class="arrow"></div>
+          </div>
+        </button>
+      </form>
+      <br />
+      <div>
+        <p>
+          ¿Aún no sos miembro?
+          <a href="../singUp/singUp.html" target="_blank">Registrate</a>
+        </p>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/992b0df65a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./login.js"></script>
+  </body>
+</html>

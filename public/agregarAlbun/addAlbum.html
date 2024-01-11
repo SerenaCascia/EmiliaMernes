@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Agrega tu album</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div id="profile">
+      <span>Usuario</span>
+      </div>
+      <!-- menu -->
+      <div> 
+          <ul>
+          <li><a href="../index.html">Otros albums</a></li>
+          <li> <a href="../editarAlbum/editarAlbum.html">Editar album</a></li>
+          <li> <a href="../agregarCanciones/agregarCanciones.html">Añadir canciones</a></li>
+          <li id="logout">Log Out</li>
+          </ul>
+          </div>
+  </div>  
+    <div class="base">
+      <form class="formularios" action="" method="">
+        <h2>Nuevo Album</h2>
+        <label
+          >Nombre del album:
+          <input
+            class="input"
+            type="text"
+            id="titulo"
+            name="nombre_del_album"
+            placeholder="Ingresa el nombre del album"
+            required /></label
+        ><br />
+        <label
+          >Año de lanzamiento:
+          <input
+          class="input"
+            type="number"
+            id="año"
+            name="año_de_lanzamiento"
+            placeholder="Ingresa el año de lanzamiento"
+            required /></label
+        ><br />
+        <textarea
+        class="input"
+          name="descripcion_del_album"
+          placeholder="Ingresa una descripcion"
+          id="descripcion_del_album"
+          cols="30"
+          rows="10"
+          required
+        ></textarea>
+        <br />
+        <label
+          >Foto del album:
+          <input
+          class="input"
+            type="text"
+            id="portada"
+            name="foto_del_disco"
+            placeholder="Ingresar la url de la imagen"
+            /></label
+        ><br />
+        <button type="submit" id="añadirAlbum">Añadir album</button>
+      </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="addAlbum.js"></script>
+  </body>
+</html>
