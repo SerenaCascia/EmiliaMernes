@@ -17,7 +17,7 @@ const loginUser = async (e) => {
     e.preventDefault()
     const objectToSend=getInputValues()
     try{
-     const respuesta = await axios.post(`/login`,objectToSend)
+     const respuesta = await axios.post(`/loginuser`,objectToSend)
     window.location.href= "../index.html"
     }
     catch(error){

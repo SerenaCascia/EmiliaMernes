@@ -39,7 +39,7 @@ router.post('/user',async(req,res)=>{
 })
 // login usuario
 
-router.post('/login', async(req,res) => {
+router.post('/loginuser', async(req,res) => {
     try {
       const email_ingresado=req.body.email
       const contraseña=req.body.contraseña
@@ -74,7 +74,7 @@ router.post('/me', async(req,res) => {
 router.post('/logout', async(req,res) => {
     try {
     const token = req.cookies.token;
-    res.cookie('token',token)
+    res.cookie('token',token+';max-age=0')
     res.status(201).send()
     } catch (error) {
      res.status(401).send("Error de deslogueo")
