@@ -4,6 +4,7 @@ const onLoad = async () => {
   try {
     const respuesta = await axios.post("../me");
   } catch (error) {
+    console.log(error)
     window.location.href = "../login/login.html";
   }
 };
@@ -90,7 +91,7 @@ const deleteAlbum = async (album) => {
         title: 'Deslogueado',
         icon: 'success',
       })
-      window.location.href= "./login/login.html"
+      window.location.href= "../login/login.html"
     } catch (error) {
       console.log(error);
     }
