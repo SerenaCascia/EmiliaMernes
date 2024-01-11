@@ -9,7 +9,7 @@ const onLoad = async () => {
   } catch (error) {
     console.log(error)
     const userName = document.getElementById("usuario");
-    userName.textContent = 'No hay nadie :(';
+    userName.textContent = 'No hay nadie :( hace el log out';
     // window.location.href = "./login/login.html";
 
   }
